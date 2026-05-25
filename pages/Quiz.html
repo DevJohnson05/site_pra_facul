@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz do Projeto</title>
+    <link rel="shortcut icon" href="./../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./../assets/css/bootstrap.min.css">
+    <script src="./../assets/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <h1 class="text-center mb-4 p-3 bg-success text-light">Quiz: Você usa muita tela?</h1>
+    <div class="container mb-4">
+        
+    
+        <form id="quizForm" class="card p-3 rounded-2">
+            <!-- Pergunta 1 -->
+            <div class="mb-3">
+                <label class="form-label">1. Quantas horas por dia você passa em frente a telas (celular, computador, TV)?</label>
+                <select name="question1" id="question1" class="form-select bg-dark-subtle">
+                    <option value="0" selected>Escolha uma opção</option>
+                    <option value="1">Menos de 2 horas por dia </option>
+                    <option value="2">De 2 horas até 4 horas por horas</option>
+                    <option value="3">De 4 horas até 6 horas</option>
+                    <option value="4">Mais de 6 horas por dia</option>
+                </select>
+            </div>
+    
+            <!-- Pergunta 2 -->
+            <div class="mb-3">
+                <label class="form-label">2. Você sente desconforto nos olhos após usar dispositivos por um longo período?</label>
+                <select name="question2" id="question2" class="form-select bg-dark-subtle">
+                    <option value="0" selected>Escolha uma opção</option>
+                    <option value="1"> Nunca </option>
+                    <option value="2"> Raramente </option>
+                    <option value="3"> Às vezes </option>
+                    <option value="4"> Frequentemente </option>
+                </select>
+            </div>
+    
+            <!-- Pergunta 3 -->
+            <div class="mb-3">
+                <label class="form-label">3. Você usa dispositivos eletrônicos antes de dormir?</label>
+                <select name="question3" id="question3" class="form-select bg-dark-subtle">
+                    <option value="0" selected>Escolha uma opção</option>
+                    <option value="1"> Nunca </option>
+                    <option value="2"> Raramente </option>
+                    <option value="3"> Às vezes </option>
+                    <option value="4"> Frequentemente </option>
+                </select>
+            </div>
+        
+            <!-- Pergunta 4 -->
+            <div class="mb-3">
+                <label class="form-label">4. Você já sentiu que o uso de dispositivos interfere no seu convívio social ou familiar?</label>
+                <select name="question4" id="question4" class="form-select bg-dark-subtle">
+                    <option value="0" selected>Escolha uma opção</option>
+                    <option value="1"> Nunca </option>
+                    <option value="2"> Raramente </option>
+                    <option value="3"> Às vezes </option>
+                    <option value="4"> Frequentemente </option>
+                </select>
+            </div>
+    
+            <!-- Pergunta 5 -->
+            <div class="mb-3">
+                <label class="form-label">5. Quando você não está usando dispositivos, sente vontade de checar notificações ou mexer no celular?</label>
+                <select name="question5" id="question5" class="form-select bg-dark-subtle">
+                    <option value="0" selected>Escolha uma opção</option>
+                    <option value="1"> Nunca </option>
+                    <option value="2"> Raramente </option>
+                    <option value="3"> Às vezes </option>
+                    <option value="4"> Frequentemente </option>
+                </select>
+            </div>
+    
+            <button type="button" class="btn btn-primary rounded" id="btn_quiz">Ver Resultado</button>
+        </form>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Resultado:</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img src="" alt="" id="img_modal" class="img-fluid mb-2 ms-4">
+                <p id="msg_modal"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="btn_back_ini">Voltar para página inicial</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid bg-dark p-4 p-sm-2 fixed-bottom">
+        <p class="text-light text-center">&copy;Projeto PIPA-2024</p>
+    </footer>
+</body>
+<script src="./../assets/js/quiz.js"></script>
